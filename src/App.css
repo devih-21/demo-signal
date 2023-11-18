@@ -28,6 +28,23 @@
   color: #61dafb;
 }
 
+.green {
+  background: green;
+}
+
+.red {
+  background: red;
+}
+
+table {
+  table-layout: fixed;
+}
+table td {
+  width: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

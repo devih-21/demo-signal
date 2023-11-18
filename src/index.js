@@ -1,13 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Signal from "./signal";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Hook from "./hook";
+import { App } from "./App";
+import { Nav } from "./nav";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Nav />,
+  },
+  {
+    path: "/signal",
+    element: <Signal />,
+  },
+  {
+    path: "/hook",
+    element: <Hook />,
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
